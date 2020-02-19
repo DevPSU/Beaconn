@@ -9,7 +9,9 @@ npm install
 
 ## Design Stack
 Primary: #34465d
+
 Secondary: #2fcc76
+
 Alternative: rgba(255,255,255,0.2)
 
 ## Demo Images
