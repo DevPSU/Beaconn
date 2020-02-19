@@ -16,6 +16,10 @@ Alternative: rgba(255,255,255,0.2)
 
 ## Demo Images
 Log In Screen
+![Image of Log In Screen]
+(https://github.com/DevPSU/Beaconn/blob/Frontend/app/images/Demo_log_in.png)
 
 
 Sign Up Screen
+![Image of Sign Up Screen]
+(https://github.com/DevPSU/Beaconn/blob/Frontend/app/images/Demo_sign_up.png)
