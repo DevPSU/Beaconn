@@ -1,23 +1,10 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
-/*import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Courses from './Courses'
+import Profile from './Profile'
 
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
-
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
 
 const Tab = createBottomTabNavigator();
 
@@ -25,16 +12,17 @@ export default function Home() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Courses" component={HomeScreen} />
-        <Tab.Screen name="Profile" component={SettingsScreen} />
+        <Tab.Screen name="Courses" component={Courses} />
+        <Tab.Screen name="Profile" component={Profile} />
       </Tab.Navigator>
     </NavigationContainer>
   );
-}*/
-
+}
+/*
 export default function Home() {
   return (
     <Text>Home</Text>
   );
 }
+*/
 
