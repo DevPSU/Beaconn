@@ -34,12 +34,14 @@ export default class Signup extends React.Component {
         //AUTHENTICATION SECTION
         //REDIRECTIONS WITH SERVER CONNECTIONS
 
-        this.props.navigation.navigate("App");
+        this.props.navigation.navigate("Home");
       }
     } catch (error) {
       console.log(error);
     }
   };
+
+  goToLogin = () => this.props.navigation.navigate("SignIn");
 
   render() {
     return (
@@ -112,6 +114,13 @@ export default class Signup extends React.Component {
 
             <View style={styles.buttonCon}>
               <TouchableOpacity
+                onPress={() => this.goToLogin()}
+                style={styles.buttonStyle}
+              >
+                <Text style={styles.textStyle}>LOG IN</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
                 onPress={() => this.onLoginSignUp()}
                 style={styles.buttonStyle}
               >
@@ -159,8 +168,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10
   },
   buttonCon: {
-    flexDirection: "column",
-    justifyContent: "center"
+    justifyContent: "center",
+    flexDirection: "row",
+    justifyContent: "space-around"
   },
 
   fixToText: {

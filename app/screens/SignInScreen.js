@@ -7,12 +7,11 @@ import {
   Image,
   Text,
   TextInput,
-  Button,
   StatusBar
 } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-export default class Login extends React.Component {
+export default class SignInScreen extends React.Component {
   state = {
     email: "",
     password: ""
@@ -34,14 +33,12 @@ export default class Login extends React.Component {
         //AUTHENTICATION SECTION
         //REDIRECTIONS WITH SERVER CONNECTIONS
 
-        this.props.navigation.navigate("App");
+        this.props.navigation.navigate("Home");
       }
     } catch (error) {
       console.log(error);
     }
   };
-
-  goToSignup = () => this.props.navigation.navigate("Signup");
 
   render() {
     const { email, password } = this.state;
@@ -89,13 +86,6 @@ export default class Login extends React.Component {
                 style={styles.buttonStyle}
               >
                 <Text style={styles.textStyle}>LOG IN</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-                onPress={() => this.goToSignup()}
-                style={styles.buttonStyle}
-              >
-                <Text style={styles.textStyle}>SIGN UP</Text>
               </TouchableOpacity>
             </View>
 
