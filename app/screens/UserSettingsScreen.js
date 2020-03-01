@@ -29,6 +29,11 @@ export default function UserSettingsScreen({ navigation }) {
           </View>
         </View>
         <View style={styles.twothird}>
+        <TouchableOpacity
+            style={styles.buttonStyle}
+          >
+            <Text style={styles.textStyle}>CHANGE PROFILE IMAGE</Text>
+          </TouchableOpacity>
           <TouchableOpacity
             onPress={ResetPassword}
             style={styles.buttonStyle}
