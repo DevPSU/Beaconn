@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Text, FlatList } from 'react-native';
 import { TouchableOpacity } from "react-native-gesture-handler";
 import Card from '../shared/Card'
+import { NavigationEvents } from 'react-navigation';
 
-export default function Home({ navigation }) {
+export default function Home({ navigation, props }) {
 
   const [beacon, setBeacon] = useState([
     { title: 'IST 331', body: 'HUM CTRD DESIGN'},
@@ -12,13 +13,19 @@ export default function Home({ navigation }) {
     { title: 'SRA 221', body: 'OVRVIEW OF INFO SEC'}
   ]);
 
+  const pressHandler = (data) => {
+    console.log(data);
+    navigation.navigate("BeaconConnect", {passedData: data});
+  }
+  
+
   return (
     <View style={styles.container}>
         <TouchableOpacity>
         <Text style={styles.beaconButton}> + ADD BEACON</Text>
         </TouchableOpacity>
         <FlatList data={beacon} renderItem={({ item }) =>(
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => pressHandler(item)}>
               <Card>
                 <Text>{item.title}</Text>
               </Card>
